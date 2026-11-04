@@ -14,3 +14,11 @@ function toonTafel()
     // alert("hij doet het" + tafelvan);
 
 } 
+function leertafel()
+{
+    let tafelvan = document.getElementById("leertafel").value;
+    let factor = Math.floor(Math.random() * 10) + 1;
+    let uitkomst = tafelvan * factor;
+    let antwoord ="Wat is " + tafelvan + " x " + factor + "?";
+    document.getElementById("outputleertafel").innerHTML = antwoord;
+}

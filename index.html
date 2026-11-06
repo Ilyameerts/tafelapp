@@ -29,15 +29,16 @@
               <div class="d-grid"> <button class="btn btn-outline-success" type="submit"
                   onclick="leertafel()">oefenen</button></div>
               <a href="#" class="btn-solid theme-primary mx-auto"></a>
-              <div id="outputleertafel"></div>
-              <div id=" antwoord"></div>
-          </div>
-          
-
-
-
-
-
+                <!-- <div id="outputleertafel"></div> -->
+                 <div class="row">
+                  <div id="outputleertafel" class="col"></div>
+                  <div class="col"> <input class="form-control me-2" type="number" placeholder="Antwoord" aria-label="Search"
+                id="antwoefentafel" /></div>
+                  <div class="col"><button class="btn btn-outline-success" type="submit"
+                  onclick="controleerAntwoord()">controleer</button></div>
+                 </div>
+                 <div id="outputcontroleer"></div>
+           </div>      
         </div>
 
 
@@ -64,7 +65,7 @@
 
       </div>
       <div class="col">
-        <button type="button" class="btn btn-danger">leer hier deelsommen</button>
+        
 
       </div>
     </div>

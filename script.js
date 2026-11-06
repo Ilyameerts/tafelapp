@@ -7,6 +7,8 @@ let antwoefentafelinpObj = document.getElementById("antwoefentafel");
 let opgavetafeloutpObj = document.getElementById("outputleertafel");
 let controleertafeloutpObj = document.getElementById("outputcontroleer");
 
+let berekendAntw = 0;
+
 function toonTafel() 
 {
     let tafelvan = inputTafelObj.value;
@@ -26,21 +28,13 @@ function leertafel()
 {
     let tafelvan = leertafelinpObj.value;
     let factor = Math.floor(Math.random() * 10) + 1;
-    let uitkomst = tafelvan * factor;
+    berekendAntw = tafelvan * factor;
     let som ="Wat is " + tafelvan + " x " + factor + "?";
     opgavetafeloutpObj.innerHTML = som;
 } 
-     
-function toonOpgave()
-{
-    let output = "";
-    let getal = Math.floor(Math.random()*6) + 1;
-    output = getal + " x " + oefentafelinpObj.value + " = ";
-    oefentafeloutpObj.innerHTML = output;
-}
+
 function controleerAntwoord()
 {
     let antw = antwoefentafelinpObj.value;
-    let berekend_antw = 0
-    alert ("antwoord = " + antw);
+    alert ("antwoord = " + antw + " " + (antw == berekendAntw ? "goed gedaan" : "Fucking loser leer langer door prutster!!"));
 }
